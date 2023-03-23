@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+/* NAV BAR */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background-color: #1879bf;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  
+}
+
+nav img {
+  height: 40px;
+  
+}
+
+.navlogin {
+  display: flex;
+  align-items: center;
+}
+
+nav #navLogo {
+  padding-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+#back {
+  margin-top: 9px;
+}
+/* LANDING PAGE */
+
+.bg-image {
+  background-image: url("imgs/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+#mainheading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.bg-image p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 0.8rem 3rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+/* About US page */
+
+#about {
+  margin: 5% 5%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
+}
+
+.col1 p {
+  font-size: 1.2rem;
+  line-height: 200%;
+  margin-bottom: 1rem;
+  margin-right: 50px;
+}
+
+.col2 {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 50%; */
+}
+
+.col2 img {
+  width: 400px;
+  height: 100%
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .row, .inputcontainer {
+    flex-direction: column;
+  }
+}
+
+/* Services page */
+
+#our-services {
+
+  margin: 2% 5%;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600рх;
+}
+
+.card {
+  height: 350px;
+  width: 350px;
+  padding: 20px 35px;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.card .icon {
+  width: 64px;
+  height: 64px;
+  display: block;
+  color: #007bff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+}
+
+.card h2 {
+  margin-top: 18px;
+}
+
+#our-services h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .services { 
+    flex-direction: column;
+  }
+}
+
+/* input */
+
+#login {
+  margin: 5%;
+}
+
+#input {
+  border: 2px solid #007bff;
+  width:500px ;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+.input-text {
+  font-size: 1.5rem;
+  padding-bottom:1rem ;
+  font-weight:600;
+  
+}
+
+.submit {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 60px;
+  outline: none;
+  font-size: 1rem;
+  display: block;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+
+#home h2 {
+  text-align: center;
+
+}
+
+.inputcontainer {
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.largeinput {
+  height: 200px;
+}
+
+.nostyle {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Table*/
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  max-width: 100%;
+  width: 90%;
+}
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  font-weight: bold;
+}
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.managebtn {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  table {
+    font-size: 12px;
+  }
+  td, th {
+    padding: 5px;
+  }
+  .managebtn {
+    padding: 2px 5px;
+  }
+}
