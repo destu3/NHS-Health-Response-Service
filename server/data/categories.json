@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "61424f5b4488633839e9ee64",
+    "name": "Emergency health service",
+    "proposedBy": "614257a334030b565af438dc",
+    "status": "approved",
+    "services": []
+  },
+  {
+    "_id": "61424f5b4488633839e9ee65",
+    "name": "On-demand health response service",
+    "proposedBy": "614257a334030b565af438dc",
+    "status": "approved",
+    "services": [
+      "614258fb34030b565af438e2",
+      "6142592534030b565af438e3",
+      "6142594d34030b565af438e4",
+      "6142597234030b565af438e5",
+      "6142599834030b565af438e6"
+    ]
+  },
+  {
+    "_id": "61424f5b4488633839e9ee66",
+    "name": "Remote health/patient monitoring",
+    "proposedBy": "614257a334030b565af438dc",
+    "status": "pending",
+    "services": []
+  }
+]

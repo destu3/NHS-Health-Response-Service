@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
 
 // import routers
 import appointmentRouter from './routers/appointmentRouter.js';
@@ -15,8 +16,15 @@ const app = express();
 // request body parser
 app.use(express.json());
 
+// cookie parser
+app.use(cookieParser());
+
 // log request info
 if (process.env.APP_ENV !== 'production') app.use(morgan('dev'));
+
+app.get('/api/', (req, res, next) => {
+  res.status(200).json('Root API route');
+});
 
 // mount routers
 app.use('/api/appointments', appointmentRouter);

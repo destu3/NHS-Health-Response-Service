@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "60c94aa71013731a3db3a7b7",
+    "patient": "60c94aa71013731a3db3a7b1",
+    "healthProfessional": "60c94aa71013731a3db3a7b2",
+    "service": "Cardiology Consultation",
+    "reason": "Chest pain and shortness of breath",
+    "facility": "60c94aa71013731a3db3a7b6",
+    "status": "Pending",
+    "date": "2022-05-10T00:00:00.000Z",
+    "time": "10:00 AM"
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b8",
+    "patient": "60c94aa71013731a3db3a7b1",
+    "healthProfessional": "60c94aa71013731a3db3a7b2",
+    "service": "Cardiology Follow-up",
+    "reason": "Checkup after hospitalization",
+    "facility": "60c94aa71013731a3db3a7b6",
+    "status": "Confirmed",
+    "date": "2022-06-15T00:00:00.000Z",
+    "time": "2:00 PM"
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7c1",
+    "patient": "60c94aa71013731a3db3a7b2",
+    "healthProfessional": "60c94aa71013731a3db3a7b3",
+    "service": "Dermatology Consultation",
+    "reason": "Rash on arms and legs",
+    "facility": "60c94aa71013731a3db3a7b6",
+    "status": "Pending",
+    "date": "2022-05-12T00:00:00.000Z",
+    "time": "9:30 AM"
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7c2",
+    "patient": "60c94aa71013731a3db3a7b2",
+    "healthProfessional": "60c94aa71013731a3db3a7b3",
+    "service": "Dermatology Follow-up",
+    "reason": "Checkup after medication",
+    "facility": "60c94aa71013731a3db3a7b6",
+    "status": "Confirmed",
+    "date": "2022-07-20T00:00:00.000Z",
+    "time": "3:30 PM"
+  }
+]

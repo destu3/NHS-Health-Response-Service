@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "60c94aa71013731a3db3a7b5",
+    "patient": "60c94aa71013731a3db3a7b1",
+    "doctor": "60c94aa71013731a3db3a7b2",
+    "date": "2022-04-01T10:30:00.000Z",
+    "medicationName": "Ibuprofen",
+    "routeOfAdministration": "Oral",
+    "status": "Active",
+    "dosage": "400mg",
+    "duration": "7 days",
+    "frequency": "3 times a day",
+    "refills": 1,
+    "notes": "Take with food"
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7ba",
+    "patient": "60c94aa71013731a3db3a7b2",
+    "doctor": "60c94aa71013731a3db3a7b4",
+    "date": "2022-04-05T14:00:00.000Z",
+    "medicationName": "Amoxicillin",
+    "routeOfAdministration": "Oral",
+    "status": "Active",
+    "dosage": "500mg",
+    "duration": "10 days",
+    "frequency": "2 times a day",
+    "refills": 0,
+    "notes": "Finish all medication even if symptoms disappear"
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7bf",
+    "patient": "60c94aa71013731a3db3a7b3",
+    "doctor": "60c94aa71013731a3db3a7b3",
+    "date": "2022-04-10T09:00:00.000Z",
+    "medicationName": "Lisinopril",
+    "routeOfAdministration": "Oral",
+    "status": "Active",
+    "dosage": "10mg",
+    "duration": "30 days",
+    "frequency": "1 time a day",
+    "refills": 3,
+    "notes": "Monitor blood pressure regularly"
+  }
+]

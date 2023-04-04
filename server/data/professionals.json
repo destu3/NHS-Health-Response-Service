@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "60c94aa71013731a3db3a7b2",
+    "firstName": "Dr. Brown",
+    "lastName": "Smith",
+    "email": "drbrownsmith@example.com",
+    "password": "password123",
+    "specialization": "Cardiology",
+    "patients": ["60c94aa71013731a3db3a7b1", "60c94aa71013731a3db3a7b2"],
+    "pendingPrescriptions": ["60c94aa71013731a3db3a7b5"],
+    "appointments": ["60c94aa71013731a3db3a7b7", "60c94aa71013731a3db3a7b8"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b3",
+    "firstName": "Dr. Johnson",
+    "lastName": "Doe",
+    "email": "drjohnsondoe@example.com",
+    "password": "password456",
+    "specialization": "Dermatology",
+    "patients": ["60c94aa71013731a3db3a7b1", "60c94aa71013731a3db3a7b3"],
+    "pendingPrescriptions": ["60c94aa71013731a3db3a7bf"],
+    "appointments": ["60c94aa71013731a3db3a7bc", "60c94aa71013731a3db3a7bd"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b4",
+    "firstName": "Dr. Green",
+    "lastName": "Johnson",
+    "email": "drgreenjohnson@example.com",
+    "password": "password789",
+    "specialization": "Oncology",
+    "patients": ["60c94aa71013731a3db3a7b2", "60c94aa71013731a3db3a7b3"],
+    "pendingPrescriptions": ["60c94aa71013731a3db3a7ba"],
+    "appointments": ["60c94aa71013731a3db3a7c1", "60c94aa71013731a3db3a7c2"]
+  }
+]

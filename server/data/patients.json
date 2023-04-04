@@ -1,0 +1,51 @@
+[
+  {
+    "_id": "60c94aa71013731a3db3a7b1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "dob": "1985-05-10T00:00:00.000Z",
+    "height": 180,
+    "weight": 80,
+    "bloodType": "AB+",
+    "doctors": ["60c94aa71013731a3db3a7b2", "60c94aa71013731a3db3a7b3"],
+    "healthProfile": "60c94aa71013731a3db3a7b4",
+    "prescriptions": ["60c94aa71013731a3db3a7b5"],
+    "appointments": ["60c94aa71013731a3db3a7b7", "60c94aa71013731a3db3a7b8"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b2",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "janedoe@example.com",
+    "password": "password456",
+    "dob": "1990-02-15T00:00:00.000Z",
+    "height": 165,
+    "weight": 60,
+    "bloodType": "A+",
+    "doctors": [
+      "60c94aa71013731a3db3a7b3",
+      "60c94aa71013731a3db3a7b4",
+      "60c94aa71013731a3db3a7b2"
+    ],
+    "healthProfile": "60c94aa71013731a3db3a7b9",
+    "prescriptions": ["60c94aa71013731a3db3a7ba"],
+    "appointments": ["60c94aa71013731a3db3a7c1", "60c94aa71013731a3db3a7c2"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b3",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "email": "alicesmith@example.com",
+    "password": "password789",
+    "dob": "1978-09-03T00:00:00.000Z",
+    "height": 170,
+    "weight": 75,
+    "bloodType": "B+",
+    "doctors": ["60c94aa71013731a3db3a7b4, 60c94aa71013731a3db3a7b3"],
+    "healthProfile": "60c94aa71013731a3db3a7be",
+    "prescriptions": ["60c94aa71013731a3db3a7bf"],
+    "appointments": ["60c94aa71013731a3db3a7bc", "60c94aa71013731a3db3a7bd"]
+  }
+]
