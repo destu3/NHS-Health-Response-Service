@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "60c94aa71013731a3db3a7b4",
+    "patient": "60c94aa71013731a3db3a7b1",
+    "medicalConditions": ["Diabetes", "Hypertension"],
+    "allergies": ["Peanuts", "Penicillin"],
+    "medication": ["60c94aa71013731a3db3a7b5"],
+    "medicalVaccinations": ["Influenza"],
+    "mentalConditions": ["Depression", "Anxiety"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7b9",
+    "patient": "60c94aa71013731a3db3a7b2",
+    "medicalConditions": ["Asthma"],
+    "allergies": ["Dust", "Pollens"],
+    "medication": ["60c94aa71013731a3db3a7ba"],
+    "medicalVaccinations": ["Hepatitis B"],
+    "mentalConditions": ["Bipolar Disorder"]
+  },
+  {
+    "_id": "60c94aa71013731a3db3a7be",
+    "patient": "60c94aa71013731a3db3a7b3",
+    "medicalConditions": ["Arthritis"],
+    "allergies": ["Shellfish"],
+    "medication": ["60c94aa71013731a3db3a7bf"],
+    "medicalVaccinations": ["Pneumococcal"],
+    "mentalConditions": ["Schizophrenia"]
+  }
+]

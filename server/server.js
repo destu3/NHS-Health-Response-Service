@@ -1,6 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+dotenv.config(); // environment variables set up
 import mongoose from 'mongoose';
 
 import Server from './classes/Server.js';
@@ -11,9 +12,6 @@ const __filename = fileURLToPath(import.meta.url);
 
 // path to current directory
 const __dirname = path.dirname(__filename);
-
-// environment variables set up
-dotenv.config({ path: path.join(__dirname, '.env') });
 
 // connect to remote database server
 mongoose.set('strictQuery', false);

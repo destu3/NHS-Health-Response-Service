@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "614267f3c3e72252d6ec5e5c",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "status": "active",
+    "categories": ["61424f5b4488633839e9ee64"],
+    "services": []
+  },
+  {
+    "_id": "614268c3c3e72252d6ec5e5d",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "janesmith@example.com",
+    "password": "password123",
+    "status": "active",
+    "categories": ["61424f5b4488633839e9ee65"],
+    "services": []
+  },
+  {
+    "_id": "6142698fc3e72252d6ec5e5e",
+    "firstName": "David",
+    "lastName": "Johnson",
+    "email": "davidjohnson@example.com",
+    "password": "password123",
+    "status": "inactive",
+    "categories": ["61424f5b4488633839e9ee66"],
+    "services": []
+  }
+]
