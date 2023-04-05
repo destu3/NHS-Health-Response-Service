@@ -1,3 +1,20 @@
+:root {
+
+  /*Colours*/
+  --nhsBlue: #1879bf;
+  --btnPrimary:#007bff;
+  --btnSecondary:#0066CC;
+  --nhsWhite: #FFFAF0;
+  --nhsBlack: #28282B;
+
+  /*Font Sizes*/
+  --fsTitle: 2rem;
+  --fsSubtitle: 1.6rem;
+  --fsStandard: 1.2rem;
+  --fsWildcard: .8rem;
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,8 +29,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 5%;
-  background-color: #1879bf;
-  color: white;
+  background-color: var(--nhsBlue);
+  color: var(--nhsWhite);
 }
 
 nav {
@@ -44,12 +61,13 @@ nav #navLogo {
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--nhsWhite);
 }
 
 #back {
   margin-top: 9px;
 }
+
 /* LANDING PAGE */
 
 .bg-image {
@@ -62,17 +80,17 @@ header a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: black;
+  color: var(--nhsBlack);
 }
 
 #mainheading {
-  font-size: 3rem;
+  font-size: var(--fsTitle);
   margin-bottom: 1rem;
-  color: black;
+  color: var(--nhsBlack);
 }
 
 .bg-image p {
-  font-size: 1.5rem;
+  font-size: var(--fsSubtitle);
   margin-bottom: 2rem;
 }
 
@@ -84,8 +102,8 @@ header a {
 
 .button {
   padding: 0.8rem 3rem;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--btnPrimary);
+  color: var(--nhsWhite);
   border: none;
   border-radius: 10px;
   font-size: 1.5rem;
@@ -100,10 +118,13 @@ header a {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: var(--fsTitle);
   margin-bottom: 1rem;
-  color: #007bff;
-  text-align: center;
+  color: var(--nhsBlue);
+}
+
+h2 {
+  font-size: var(--fsSubtitle);
 }
 
 .col1 p {
@@ -139,7 +160,6 @@ h1 {
 /* Services page */
 
 #our-services {
-
   margin: 2% 5%;
 }
 
@@ -162,11 +182,17 @@ h1 {
   text-align: center;
 }
 
+.card:hover {
+  width: 360px;
+  height: 360px;
+  transition: 0.6s;
+}
+
 .card .icon {
   width: 64px;
   height: 64px;
   display: block;
-  color: #007bff;
+  color: var(--nhsBlue);
   margin-left: auto;
   margin-right: auto;
   margin-top: 18px;
@@ -179,7 +205,7 @@ h1 {
 #our-services h1 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
-  color: #007bff;
+  color: var(--nhsBlue);
   text-align: center;
 }
 
@@ -193,6 +219,7 @@ h1 {
   }
 }
 
+
 /* input */
 
 #login {
@@ -201,7 +228,7 @@ h1 {
 
 #input {
   border: 2px solid #007bff;
-  width:500px ;
+  width:500px;
   border-radius: 5px;
   padding: 15px 25px;
   font-size: 16px;
@@ -227,7 +254,6 @@ h1 {
   border: none;
   cursor: pointer;
 }
-
 
 #home h2 {
   text-align: center;
@@ -257,35 +283,43 @@ table {
   max-width: 100%;
   width: 90%;
 }
+
 thead {
   background-color: #007bff;
   color: #fff;
 }
+
 th, td {
   text-align: left;
   padding: 8px;
 }
+
 th {
   font-weight: bold;
 }
+
 tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
 .managebtn {
   background-color: #ffffff;
   border: none;
   cursor: pointer;
   padding: 5px 10px;
 }
+
 button:hover {
   background-color: #007bff;
   color: #ffffff;
 }
+
 @media screen and (max-width: 768px) {
   table {
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 480px) {
   table {
     font-size: 12px;

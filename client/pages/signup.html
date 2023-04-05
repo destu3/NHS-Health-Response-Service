@@ -13,7 +13,6 @@
   <body>
     <header>
       <nav>
-        <a href="../index" class="back"><img src="../imgs/back.png" /></a>
         <img src="../imgs/nhs-logo.png" alt="logo" />
         <p id="navLogo">Service Response App</p>
       </nav>
@@ -24,8 +23,33 @@
     </header>
 
     <section id="login">
-      <h1>SignUp</h1>
-      <div class="inputcontainer">
+      <h1>SIGN UP</h1>
+      <form action="POST">
+        <!--First Name-->
+        <label for="firstName">First Name</label><br>
+        <input type="text" placeholder="First Name" id="firstName"><br>
+        <!--Last Name-->
+        <label for="lastName">Last Name</label><br>
+        <input type="text" placeholder="Last Name" id="lastName"><br>
+        <!--Date of Birth-->
+        <label for="dateOfBirth">Date of Birth</label><br>
+        <input type="date" placeholder="D.O.B." id="dateOfBirth"><br>
+        <!--Email Address-->
+        <label for="emailAddress">Email Address</label><br>
+        <input type="email" placeholder="your@email.com" id="emailAddress"><br>
+        <!--Password-->
+        <label for="password">Enter Password</label><br>
+        <input type="password" placeholder="Enter Password" id="password"><br>
+        <!--Confirm Password-->
+        <label for="password">Confirm Password</label><br>
+        <input type="password" placeholder="Confirm Password" id="password"><br>
+        
+        <button type="submit">SIGN-UP</button>
+
+      </form>
+
+<!--
+<div class="inputcontainer">
         <div class="col">
           <p class="input-text">First Name*</p>
           <input type="text" placeholder="firstName secondName" id="input" />
@@ -49,5 +73,7 @@
       </div>
       <button class="submit">LogIn</button>
     </section>
+-->
+      
   </body>
 </html>

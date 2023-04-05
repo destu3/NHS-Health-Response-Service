@@ -14,7 +14,6 @@
 
     <header>
       <nav>
-        <a href = "home.html" id = "back"><img src="../imgs/back.png"></a>
         <img src="../imgs/nhs-logo.png" alt="logo"/>
         <p id = "navLogo">Service Response App</p>
       </nav>
@@ -25,15 +24,20 @@
     </header>
 
     <section id = "login">
-        <h1>LogIn</h1>
+        <h1>LOG IN</h1>
+        
+        <form action="POST" >
+          <label for="email">Enter Email:</label><br>
+          <input type="email" placeholder="your@email.com" id = "email"><br>
+          
+          <label for="password">Enter Password:</label><br>
+          <input type="password" placeholder="Password" id = "password"><br>
+  
+          <!--CODE FOR USER ROLE-->
 
-        <p class = "input-text">Enter Email*</p>
-        <input type="text" placeholder="youremail@gmail.com" id = "input">
-
-        <p class = "input-text">Enter Password*</p>
-        <input type="text" placeholder="password" id = "input">
-
-        <button class = "submit">LogIn</button>
+          <button class = "submit">Log-In</button>
+        </form>
+        
     </section>
 
 
