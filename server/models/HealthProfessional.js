@@ -28,7 +28,7 @@ const healthProfessionalSchema = new mongoose.Schema({
       ref: 'Patient',
     },
   ],
-  pendingPrescriptions: [
+  prescriptions: [
     {
       type: mongoose.Schema.ObjectId,
       ref: 'Prescription',

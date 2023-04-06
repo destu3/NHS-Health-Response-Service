@@ -22,18 +22,6 @@ const serviceManagerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  categories: [
-    {
-      type: mongoose.Schema.ObjectId,
-      ref: 'ServiceCategory',
-    },
-  ],
-  services: [
-    {
-      type: mongoose.Schema.ObjectId,
-      ref: 'HealthcareService',
-    },
-  ],
 });
 
 const ServiceManager = mongoose.model('ServiceManager', serviceManagerSchema);

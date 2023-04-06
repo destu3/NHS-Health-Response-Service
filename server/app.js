@@ -10,6 +10,7 @@ import healthProfileRouter from './routers/healthProfileRouter.js';
 import prescriptionRouter from './routers/prescriptionRouter.js';
 import serviceRouter from './routers/serviceRouter.js';
 import userRouter from './routers/userRouter.js';
+import AuthController from './controllers/AuthController.js';
 
 const app = express();
 
@@ -27,12 +28,14 @@ app.get('/api/', (req, res, next) => {
 });
 
 // mount routers
+app.use('/api/users', userRouter);
+// all routes should be protected
+app.use(new AuthController().protect());
 app.use('/api/appointments', appointmentRouter);
 app.use('/api/categories', categoryRouter);
 app.use('/api/facilities', facilityRouter);
 app.use('/api/healthProfiles', healthProfileRouter);
 app.use('/api/prescriptions', prescriptionRouter);
 app.use('/api/services', serviceRouter);
-app.use('/api/users', userRouter);
 
 export default app;

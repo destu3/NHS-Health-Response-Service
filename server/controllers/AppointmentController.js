@@ -1,10 +1,6 @@
 import HandlerFactory from '../classes/HandlerFactory.js';
 import _Appointment from '../models/Appointment.js';
 
-// remove later after all controllers have been fully configured and are being used by routers
-// doing this for now because using .populate() reference models requires the reference models to be loaded
-import _Patient from '../models/Patient.js';
-import _HealthProfessional from '../models/HealthProfessional.js';
 import catchAsync from '../helpers/catchAsync.js';
 
 const handlerFactory = new HandlerFactory(_Appointment);
