@@ -180,12 +180,11 @@ h2 {
   overflow: hidden;
   position: relative;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  width: 360px;
-  height: 360px;
-  transition: 0.6s;
+  transform: scale(1.06);
 }
 
 .card .icon {
