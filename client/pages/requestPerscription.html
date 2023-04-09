@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NHS Service Response App</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,22 +25,31 @@
     </header>
 
     <section id="login">
-      <h1>SignUp</h1>
+      <h1>Request Prescription</h1>
       <div class="">
 
-        <div class="col">
-          <p class="input-text">Perscription Type*</p>
-          <input type="text" placeholder="Medicine" id="input" />
+        <form action="POST">
 
-          <p class="input-text">What Perscription are you lookin to get?*</p>
-          <input type="date" placeholder="00/00/0000" id="input" />
+          <label for="">Doctor</label><br>
+          <input type="text" name="doctor" id="doctor" placeholder="Your Doctor's Name"><br>
 
-          <p class="input-text">State Reason?*</p>
-          <input type="date" placeholder="64 zoo lane" id="input" class ="largeinput" />
+          <label for="">Prescription</label><br>
+          <input type="text" name="prescription" id="prescription" placeholder="Enter Your Request"><br>
 
-        </div>
+          <label for="">Dosage</label><br>
+          <input type="text" name="dosage" id="dosage" placeholder="Enter how much you would like"><br>
+
+          <label for="">Frequency</label><br>
+          <input type="text" name="frequency" id="frequency" placeholder="How often do you take this medication?"><br>
+
+          <label for="">Further Information</label><br>
+          <textarea name="furtherInfo" id="furtherInfo" cols="30" rows="5"></textarea><br>
+
+          <input id="btnPrimary" type="submit" value="submit">
+
+        </form>
+
       </div>
-      <button class="submit">LogIn</button>
     </section>
   </body>
 </html>

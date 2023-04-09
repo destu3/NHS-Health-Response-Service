@@ -22,6 +22,7 @@
   font-family: Poppins, sans-serif;
 }
 
+
 /* NAV BAR */
 
 header {
@@ -36,12 +37,10 @@ header {
 nav {
   display: flex;
   align-items: center;
-  
 }
 
 nav img {
-  height: 40px;
-  
+  height: 40px; 
 }
 
 .navlogin {
@@ -64,9 +63,6 @@ header a {
   color: var(--nhsWhite);
 }
 
-#back {
-  margin-top: 9px;
-}
 
 /* LANDING PAGE */
 
@@ -151,11 +147,6 @@ h2 {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1000px) {
-  .row, .inputcontainer {
-    flex-direction: column;
-  }
-}
 
 /* Services page */
 
@@ -212,11 +203,6 @@ h2 {
   margin-top: 10px;
 }
 
-@media (max-width: 900px) {
-  .services { 
-    flex-direction: column;
-  }
-}
 
 
 /* input */
@@ -225,7 +211,7 @@ h2 {
   margin: 5%;
 }
 
-#input {
+input, textarea {
   border: 2px solid #007bff;
   width:500px;
   border-radius: 5px;
@@ -233,10 +219,11 @@ h2 {
   font-size: 16px;
   outline: none;
   margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .input-text {
-  font-size: 1.5rem;
+  
   padding-bottom:1rem ;
   font-weight:600;
   
@@ -253,6 +240,25 @@ h2 {
   border: none;
   cursor: pointer;
 }
+
+label{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+#btnPrimary{
+  background-color: var(--btnPrimary);
+  color: var(--nhsWhite);
+  padding: 15px 60px;
+  outline: none;
+  font-size: 1rem;
+  display: block;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+}
+
 
 #home h2 {
   text-align: center;
@@ -317,6 +323,10 @@ button:hover {
   table {
     font-size: 14px;
   }
+
+  input, textarea {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -328,5 +338,17 @@ button:hover {
   }
   .managebtn {
     padding: 2px 5px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .row, .inputcontainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .services { 
+    flex-direction: column;
   }
 }

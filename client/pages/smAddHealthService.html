@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,36 +26,24 @@
     </header>
 
     <section id="login">
-      <h1>Manage Health Service Catagory</h1>
-      <br>
-      <table>
-        <thead>
-          <tr>
-            <th>Catagory</th>
-            <th>Proposed By</th>
-            <th>Services</th>
-            <th>Status</th>
-            <th>Manage?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Physical Health</td>
-            <td>Ahmed</td>
-            <td>Therapy</td>
-            <td>Pending</td>
-            <td><button class = "managebtn">Manage</button></td>
-          </tr>
-          <tr>
-            <td>Physical Health</td>
-            <td>Ahmed</td>
-            <td>Therapy</td>
-            <td>Pending</td>
-            <td><button class = "managebtn">Manage</button></td>
-          </tr>
-        </tbody>
-      </table> 
+      <h1>Add Health Service</h1>
+
+        <form action="POST">
+
+          <label for="">Serice Name</label><br>
+          <input type="text" placeholder="Catagory" id="input" />
+
+          <label for="">Proposed by</label><br>
+          <input type="Text" placeholder="Jhon Smith" id="input" />
+
+          <label for="">Catagory</label><br>
+          <input type="Text" placeholder="Jhon Smith" id="input" />
+
+          <input id="btnPrimary" type="submit" value="Add">
+        </form>
+
+
+
     </section>
   </body>
 </html>
-

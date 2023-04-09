@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NHS Service Response App</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,26 +26,26 @@
 
     <section id="login">
       <h1>Book Appointment</h1>
-      <div class="inputcontainer">
-        <div class="col">
-          <p class="input-text">Appointment Type*</p>
-          <input type="text" placeholder="firstName secondName" id="input" />
+      
 
-          <p class="input-text">service*</p>
-          <input type="text" placeholder="07765 654 45" id="input" />
+      <form action="POST">
+          <label for="">Appointment Type:</label><br>
+          <input type="text" placeholder="Appointment type" id="input" /><br>
 
-          <p class="input-text">Preffered Appointment Date</p>
-          <input type="date" placeholder="00/00/0000" id="input" />
+          <label for="">Services:</label><br>
+          <input type="text" placeholder="Services" id="input" /><br>
 
-          <p class="input-text">Preferred Time</p>
-          <input type="time" placeholder="64 zoo lane" id="input" />
-        </div>
-        <div class="col">
-          <p class="input-text">Reason*</p>
-          <input type="text" placeholder="Please State Porblem. etc" id="input" class ="largeinput" />
+          <label for="">Preffered Appointment Date</label><br>
+          <input type="date" placeholder="" id="input" /><br>
 
-        </div>
-      </div>
+          <label for="">Preffered Time</label><br>
+          <input type="time" placeholder="" id="input" /><br>
+
+          <label for="">Reason</label><br>
+          <textarea type="text" placeholder="Reason" id="input" class ="largeinput"></textarea>
+      </form>
+
+
       <button class="submit">LogIn</button>
     </section>
   </body>
