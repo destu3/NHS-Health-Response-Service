@@ -19,6 +19,7 @@ const serviceCategorySchema = new mongoose.Schema({
     {
       type: mongoose.Schema.ObjectId,
       ref: 'HealthcareService',
+      default: [],
     },
   ],
 });

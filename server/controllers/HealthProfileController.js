@@ -1,17 +1,24 @@
-import _HealthProfile from '../models/HealthProfile';
+import _HealthProfile from '../models/HealthProfile.js';
+import HandlerFactory from '../classes/HandlerFactory.js';
+
+const handlerFactory = new HandlerFactory(_HealthProfile);
 
 class HealthProfileController {
   constructor(HealthProfile = _HealthProfile) {
     this.HealthProfile = HealthProfile;
   }
 
-  getProfile(req, res, next) {}
+  getProfile() {
+    return handlerFactory.get();
+  }
 
-  updateProfile(req, res, next) {}
+  updateProfile() {
+    return handlerFactory.update();
+  }
 
-  deleteProfile(req, res, next) {}
-
-  createProfile(req, res, next) {}
+  deleteProfile() {
+    return handlerFactory.delete();
+  }
 }
 
 export default HealthProfileController;

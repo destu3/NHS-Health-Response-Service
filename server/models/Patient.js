@@ -25,15 +25,12 @@ const patientSchema = new mongoose.Schema({
   },
   height: {
     type: Number,
-    required: true,
   },
   weight: {
     type: Number,
-    required: true,
   },
   bloodType: {
     type: String,
-    required: true,
   },
   doctors: [
     {

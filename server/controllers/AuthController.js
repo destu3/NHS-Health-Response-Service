@@ -5,9 +5,7 @@ import catchAsync from '../helpers/catchAsync.js';
 import _Patient from '../models/Patient.js';
 import _HealthProfessional from '../models/HealthProfessional.js';
 import _ServiceManager from '../models/ServiceManager.js';
-import HandlerFactory from '../classes/HandlerFactory.js';
-
-const handlerFactory = new HandlerFactory(_Patient);
+import HealthProfile from '../models/HealthProfile.js';
 
 class AuthController {
   constructor(
@@ -49,6 +47,8 @@ class AuthController {
       if (!email || !password)
         throw new Error('Email or password is not provided');
 
+      if (!role) throw new Error('Please specify a user role');
+
       let user;
 
       if (role === 'manager') {
@@ -75,7 +75,18 @@ class AuthController {
   }
 
   register() {
-    return handlerFactory.createOne();
+    return catchAsync(async (req, res, next) => {
+      const data = req.body;
+
+      const newDoc = await this.Patient.create(data);
+
+      const hp = await HealthProfile.create({ patient: newDoc.id });
+
+      newDoc.healthProfile = hp;
+      await newDoc.save();
+
+      res.status(201).json({ status: 'success', data: { newDoc } });
+    });
   }
 
   protect() {

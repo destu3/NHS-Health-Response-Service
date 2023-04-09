@@ -1,17 +1,28 @@
-import _HealthcareService from '../models/HealthcareService';
+import _HealthcareService from '../models/HealthcareService.js';
+import HandlerFactory from '../classes/HandlerFactory.js';
+
+const handlerFactory = new HandlerFactory(_HealthcareService);
 
 class ServiceController {
   constructor(HealthcareService = _HealthcareService) {
     this.HealthcareService = HealthcareService;
   }
 
-  addService(req, res, next) {}
+  addService() {
+    return handlerFactory.createOne();
+  }
 
-  updateService(req, res, next) {}
+  updateService() {
+    return handlerFactory.update();
+  }
 
-  deleteService(req, res, next) {}
+  deleteService() {
+    return handlerFactory.delete();
+  }
 
-  getServices(req, res, next) {}
+  getServices() {
+    return handlerFactory.getMany();
+  }
 }
 
 export default ServiceController;

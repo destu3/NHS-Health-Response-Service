@@ -1,17 +1,28 @@
-import _ServiceCategory from '../models/ServiceCategory';
+import _ServiceCategory from '../models/ServiceCategory.js';
+import HandlerFactory from '../classes/HandlerFactory.js';
+
+const handlerFactory = new HandlerFactory(_ServiceCategory);
 
 class CategoryController {
   constructor(ServiceCategory = _ServiceCategory) {
     this.ServiceCategory = ServiceCategory;
   }
 
-  addCategory(req, res, next) {}
+  addCategory() {
+    return handlerFactory.createOne();
+  }
 
-  updateCategory(req, res, next) {}
+  updateCategory() {
+    return handlerFactory.update();
+  }
 
-  deleteCategory(req, res, next) {}
+  deleteCategory() {
+    return handlerFactory.delete();
+  }
 
-  getCategories(req, res, next) {}
+  getCategories() {
+    return handlerFactory.getMany();
+  }
 }
 
 export default CategoryController;
