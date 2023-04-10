@@ -35,6 +35,8 @@ const healthcareFacilitySchema = new mongoose.Schema({
   },
 });
 
+healthcareFacilitySchema.index({ location: '2dsphere' });
+
 const HealthcareFacility = mongoose.model(
   'HealthcareFacility',
   healthcareFacilitySchema
