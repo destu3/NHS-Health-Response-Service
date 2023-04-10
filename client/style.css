@@ -63,7 +63,7 @@ header a {
 /* LANDING PAGE */
 
 .bg-image {
-  background-image: url("imgs/background.png");
+  background-image: url('imgs/background.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 65vh;
