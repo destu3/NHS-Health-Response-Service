@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NHS Service Response App</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,54 +29,40 @@
       <h1>SIGN UP</h1>
       <form action="POST">
         <!--First Name-->
-        <label for="firstName">First Name</label><br>
-        <input type="text" placeholder="First Name" id="firstName"><br>
+        <label for="firstName">First Name</label><br />
+        <input type="text" placeholder="First Name" id="firstName" /><br />
         <!--Last Name-->
-        <label for="lastName">Last Name</label><br>
-        <input type="text" placeholder="Last Name" id="lastName"><br>
+        <label for="lastName">Last Name</label><br />
+        <input type="text" placeholder="Last Name" id="lastName" /><br />
         <!--Date of Birth-->
-        <label for="dateOfBirth">Date of Birth</label><br>
-        <input type="date" placeholder="D.O.B." id="dateOfBirth"><br>
+        <label for="dateOfBirth">Date of Birth</label><br />
+        <input type="date" placeholder="D.O.B." id="dob" /><br />
         <!--Email Address-->
-        <label for="emailAddress">Email Address</label><br>
-        <input type="email" placeholder="your@email.com" id="emailAddress"><br>
+        <label for="emailAddress">Email Address</label><br />
+        <input
+          type="email"
+          placeholder="your@email.com"
+          id="emailAddress"
+        /><br />
         <!--Password-->
-        <label for="password">Enter Password</label><br>
-        <input type="password" placeholder="Enter Password" id="password"><br>
+        <label for="password">Enter Password</label><br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="password"
+        /><br />
         <!--Confirm Password-->
-        <label for="password">Confirm Password</label><br>
-        <input type="password" placeholder="Confirm Password" id="password"><br>
-        
-        <input id="btnPrimary" type="submit" value="SIGN UP">
+        <label for="password">Confirm Password</label><br />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="cpassword"
+        /><br />
 
+        <input type="button" value="Sign Up" class="btnPrimary signUpBtn" />
       </form>
-
-<!--
-<div class="inputcontainer">
-        <div class="col">
-          <p class="input-text">First Name*</p>
-          <input type="text" placeholder="firstName secondName" id="input" />
-
-          <p class="input-text">Last Name*</p>
-          <input type="text" placeholder="00/00/0000" id="input" />
-
-          <p class="input-text">Enter DOB*</p>
-          <input type="date" placeholder="64 zoo lane" id="input" />
-
-          <p class="input-text">Phone Number*</p>
-          <input type="text" placeholder="07765 654 45" id="input" />
-        </div>
-        <div class="col">
-          <p class="input-text">Enter Password*</p>
-          <input type="text" placeholder="password" id="input" />
-
-          <p class="input-text">Re-Enter Password*</p>
-          <input type="text" placeholder="password" id="input" />
-        </div>
-      </div>
-      <button class="submit">LogIn</button>
     </section>
--->
-      
+
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>

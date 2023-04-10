@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NHS Service Response App</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,11 +14,10 @@
     />
   </head>
   <body>
-
     <header>
       <nav>
-        <img src="../imgs/nhs-logo.png" alt="logo"/>
-        <p id = "navLogo">Service Response App</p>
+        <img src="../imgs/nhs-logo.png" alt="logo" />
+        <p id="navLogo">Service Response App</p>
       </nav>
       <div class="navlogin">
         <a href="../pages/login.html"><p>LogIn/</p></a>
@@ -26,25 +25,22 @@
       </div>
     </header>
 
-    <section id = "login">
-        <h1>LOG IN</h1>
-        
-        <form action="POST" >
-          <form action="POST" >
-          <label for="email">Enter Email:</label><br>
-          <input type="email" placeholder="your@email.com" id = "email"><br>
-          
-          <label for="password">Enter Password:</label><br>
-          <input type="password" placeholder="Password" id = "password"><br>
-  
-          <!--CODE FOR USER ROLE-->
+    <section id="login">
+      <h1>LOG IN</h1>
 
-          <input id="btnPrimary" type="submit" value="LOG IN">
-        </form>
-        
+      <form action="POST">
+        <label for="email">Enter Email:</label><br />
+        <input type="email" placeholder="your@email.com" id="email" /><br />
+
+        <label for="password">Enter Password:</label><br />
+        <input type="password" placeholder="Password" id="password" /><br />
+
+        <!--CODE FOR USER ROLE-->
+
+        <input type="button" value="Log In" class="btnPrimary loginBtn" />
+      </form>
     </section>
 
-
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>
-
