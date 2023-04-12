@@ -40,9 +40,9 @@ nav img {
   height: 40px;
 }
 
-.navlogin {
+.login-register {
   display: flex;
-  align-items: center;
+  gap: 1rem;
 }
 
 nav #navLogo {
