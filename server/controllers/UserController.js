@@ -3,6 +3,9 @@ import _HealthProfessional from '../models/HealthProfessional.js';
 import _ServiceManager from '../models/ServiceManager.js';
 import HandlerFactory from '../classes/HandlerFactory.js';
 import catchAsync from '../helpers/catchAsync.js';
+import AuthController from './AuthController.js';
+
+const authController = new AuthController();
 
 const handlerFactory = new HandlerFactory(_Patient);
 
@@ -72,8 +75,12 @@ class UserController {
 
       if (!doc) throw new Error(`Couldn't find resource with id ${id}`);
 
+      if (doc.password) doc.password = undefined;
+
+      const token = authController.sendToken({ doc });
+
       // send response
-      res.status(200).json({ status: 'success', data: { doc } });
+      res.status(200).json({ status: 'success', data: { doc }, token });
     });
   }
 }

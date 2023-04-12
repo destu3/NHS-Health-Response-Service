@@ -18,8 +18,7 @@ const healthProfileSchema = new mongoose.Schema({
   ],
   medication: [
     {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Prescription',
+      type: String,
     },
   ],
   medicalVaccinations: [

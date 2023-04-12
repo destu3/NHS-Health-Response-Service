@@ -14,26 +14,29 @@
     />
   </head>
   <body>
-    <header>
+    <header class="nav-sect">
       <nav>
-        <img src="../imgs/nhs-logo.png" alt="logo" />
+        <img src="/imgs/nhs-logo.png" alt="logo" />
         <p id="navLogo">Service Response App</p>
       </nav>
-      <div class="navlogin"></div>
     </header>
 
     <section id="login">
       <h1>Manage Account Detail</h1>
-      <div class="col1">
-        <p class="input-text">Full name:</p>
+      <div class="details">
+        <label for="f-name">First Name</label>
+        <input id="f-name" class="acc-field" />
 
-        <p class="input-text">Date of Birth:</p>
+        <label for="l-name">Last Name</label>
+        <input id="l-name" class="acc-field" />
 
-        <p class="input-text">Email:</p>
+        <label for="dob">Date of Birth</label>
+        <input id="dob" class="acc-field" />
 
-        <p class="input-text">PhoneNumber:</p>
+        <label for="email">Email</label>
+        <input id="email" class="acc-field" />
       </div>
-      <button class="submit">Edit</button>
+      <button class="submit">Update</button>
     </section>
 
     <script type="module" src="../main.js"></script>

@@ -17,7 +17,12 @@ import errorHandler from './helpers/errorHandler.js';
 const app = express();
 
 // cors
-app.use(cors());
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 // request body parser
 app.use(express.json());

@@ -3,10 +3,6 @@
     "name": "Edinburgh Royal Infirmary",
     "contact": "+44 131 536 1000",
     "type": "Hospital",
-    "services": [
-      "Emergency Health Service",
-      "On-Demand Health Response Service"
-    ],
     "operatingHours": {
       "Monday": "Open 24 hours",
       "Tuesday": "Open 24 hours",
@@ -27,10 +23,6 @@
     "name": "Glasgow Royal Infirmary",
     "contact": "+44 141 211 4000",
     "type": "Hospital",
-    "services": [
-      "Emergency Health Service",
-      "On-Demand Health Response Service"
-    ],
     "operatingHours": {
       "Monday": "Open 24 hours",
       "Tuesday": "Open 24 hours",
@@ -51,10 +43,6 @@
     "name": "Aberdeen Royal Infirmary",
     "contact": "+44 1224 553641",
     "type": "Hospital",
-    "services": [
-      "Emergency Health Service",
-      "On-Demand Health Response Service"
-    ],
     "operatingHours": {
       "Monday": "Open 24 hours",
       "Tuesday": "Open 24 hours",
@@ -75,10 +63,6 @@
     "name": "Royal Infirmary of Edinburgh",
     "contact": "0131 536 1000",
     "type": "Hospital",
-    "services": [
-      "Emergency Health Services",
-      "On-Demand Health Response Services"
-    ],
     "operatingHours": {
       "monday": ["8:00am - 6:00pm"],
       "tuesday": ["8:00am - 6:00pm"],
@@ -95,38 +79,11 @@
       "address": "51 Little France Crescent"
     }
   },
-  {
-    "name": "Ninewells Hospital",
-    "contact": "01382 660111",
-    "type": "Hospital",
-    "services": [
-      "Emergency Health Services",
-      "On-Demand Health Response Services"
-    ],
-    "operatingHours": {
-      "monday": ["Open 24 hours"],
-      "tuesday": ["Open 24 hours"],
-      "wednesday": ["Open 24 hours"],
-      "thursday": ["Open 24 hours"],
-      "friday": ["Open 24 hours"],
-      "saturday": ["Open 24 hours"],
-      "sunday": ["Open 24 hours"]
-    },
-    "location": {
-      "type": "Point",
-      "coordinates": [-2.959982, 56.472121],
-      "city": "Dundee",
-      "address": "Ninewells Avenue"
-    }
-  },
+
   {
     "name": "Western General Hospital",
     "contact": "0131 537 1000",
     "type": "Hospital",
-    "services": [
-      "Emergency Health Services",
-      "On-Demand Health Response Services"
-    ],
     "operatingHours": {
       "monday": ["Open 24 hours"],
       "tuesday": ["Open 24 hours"],
@@ -147,11 +104,6 @@
     "name": "Boots Pharmacy",
     "contact": "+44 141 429 1572",
     "type": "Pharmacy",
-    "services": [
-      "Prescription dispensing",
-      "Over-the-counter medications",
-      "Consultations with a pharmacist"
-    ],
     "operatingHours": {
       "Monday": "8:30am - 6:00pm",
       "Tuesday": "8:30am - 6:00pm",
@@ -172,11 +124,6 @@
     "name": "Boots Pharmacy",
     "contact": "+44 131 346 1431",
     "type": "Pharmacy",
-    "services": [
-      "Prescription dispensing",
-      "Over-the-counter medications",
-      "Consultations with a pharmacist"
-    ],
     "operatingHours": {
       "Monday": "9:00am - 6:00pm",
       "Tuesday": "9:00am - 6:00pm",
@@ -197,11 +144,6 @@
     "name": "Abbeyfield Scotland Ltd",
     "contact": "+44 131 226 2454",
     "type": "Nursing Home",
-    "services": [
-      "24-hour care",
-      "Assisted living",
-      "Social activities and events"
-    ],
     "operatingHours": {
       "Monday": "Open 24 hours",
       "Tuesday": "Open 24 hours",

@@ -1,11 +1,11 @@
-import { promisify } from "util";
-import bcrypt from "bcrypt";
-import jsonwebtoken from "jsonwebtoken";
-import catchAsync from "../helpers/catchAsync.js";
-import _Patient from "../models/Patient.js";
-import _HealthProfessional from "../models/HealthProfessional.js";
-import _ServiceManager from "../models/ServiceManager.js";
-import HealthProfile from "../models/HealthProfile.js";
+import { promisify } from 'util';
+import bcrypt from 'bcrypt';
+import jsonwebtoken from 'jsonwebtoken';
+import catchAsync from '../helpers/catchAsync.js';
+import _Patient from '../models/Patient.js';
+import _HealthProfessional from '../models/HealthProfessional.js';
+import _ServiceManager from '../models/ServiceManager.js';
+import HealthProfile from '../models/HealthProfile.js';
 
 class AuthController {
   constructor(
@@ -30,11 +30,10 @@ class AuthController {
 
   sendCookie(value, res) {
     const cookieOpts = {
-      httpOnly: true,
-      domain: "http://127.0.0.1:5500",
+      httpOnly: false,
     };
 
-    res.cookie("token", value, cookieOpts);
+    res.cookie('token', value, cookieOpts);
   }
 
   login() {
@@ -46,15 +45,15 @@ class AuthController {
 
       // check if email and password are given
       if (!email || !password)
-        throw new Error("Email or password is not provided");
+        throw new Error('Email or password is not provided');
 
-      if (!role) throw new Error("Please specify a user role");
+      if (!role) throw new Error('Please specify a user role');
 
       let user;
 
-      if (role === "manager") {
+      if (role === 'manager') {
         user = await this.ServiceManager.findOne({ email });
-      } else if (role === "doctor") {
+      } else if (role === 'doctor') {
         user = await this.HealthProfessional.findOne({ email });
       } else {
         user = await this.Patient.findOne({ email });
@@ -62,7 +61,7 @@ class AuthController {
 
       // check if user exists based on email and check if password is correct
       if (!user || !(await this.verifyPassword(password, user.password)))
-        throw new Error("No user found, Email or password is incorrect");
+        throw new Error('No user found, Email or password is incorrect');
 
       user.password = undefined;
 
@@ -71,7 +70,7 @@ class AuthController {
 
       this.sendCookie(token, res);
       // send token
-      res.status(200).json({ status: "success", token, user });
+      res.status(200).json({ status: 'success', token, user });
     });
   }
 
@@ -86,7 +85,7 @@ class AuthController {
       newDoc.healthProfile = hp;
       await newDoc.save();
 
-      res.status(201).json({ status: "success", data: { newDoc } });
+      res.status(201).json({ status: 'success', data: { newDoc } });
     });
   }
 
@@ -98,7 +97,7 @@ class AuthController {
       if (req.cookies.token) token = req.cookies.token;
       if (!token)
         throw new Error(
-          "token cookie was not sent with request, i.e. user is not logged in"
+          'token cookie was not sent with request, i.e. user is not logged in'
         );
 
       // verify token is valid

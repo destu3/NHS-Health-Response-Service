@@ -7,9 +7,9 @@
   --nhsBlack: #28282b;
 
   /*Font Sizes*/
-  --fsTitle: 2rem;
+  --fsTitle: 1.7rem;
   --fsSubtitle: 1.6rem;
-  --fsStandard: 1.2rem;
+  --fsStandard: 1rem;
   --fsWildcard: 0.8rem;
 }
 
@@ -207,13 +207,17 @@ h2 {
 input,
 textarea {
   border: 2px solid #007bff;
-  width: 500px;
+
   border-radius: 5px;
-  padding: 15px 25px;
+  padding: 10px 40px;
+  padding-left: 5px;
   font-size: 16px;
   outline: none;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+}
+
+.details > input {
+  display: block;
 }
 
 .input-text {
@@ -231,6 +235,8 @@ textarea {
   margin-top: 50px;
   border: none;
   cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 label {

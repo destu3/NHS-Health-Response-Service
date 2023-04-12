@@ -1,10 +1,19 @@
 import { login } from './js/login.js';
 import { signup } from './js/signup.js';
-import getLoggedInUser from './js/profile.js';
+import {
+  getLoggedInUser,
+  displayDetails,
+  updateDetails,
+} from './js/profile.js';
+import { decideNavContent } from './js/nav.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
+const submit = document.querySelector('.submit');
+
+// render navigation bar
+decideNavContent();
 
 // login
 if (loginBtn) {
@@ -32,6 +41,10 @@ if (signUpBtn) {
 
 // manage account profile
 if (window.location.pathname.includes('/manageAccountDetail')) {
-  const user = getLoggedInUser();
-  console.log(getLoggedInUser());
+  displayDetails();
+}
+
+// update user info
+if (submit) {
+  submit.addEventListener('click', updateDetails);
 }

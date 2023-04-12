@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NHS Service Response App</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,37 +14,37 @@
     />
   </head>
   <body>
-    <header>
+    <header class="nav-sect">
       <nav>
-        <img src="../imgs/nhs-logo.png" alt="logo" />
+        <img src="/imgs/nhs-logo.png" alt="logo" />
         <p id="navLogo">Service Response App</p>
       </nav>
-      <a href = "manageAccountDetail.html"><div class="navlogin">
-        <img src="../icons/account.png" alt="logo"/>
-      </div></a>
     </header>
 
     <section id="login">
       <h1>Book Appointment</h1>
-      
 
       <form action="POST">
-          <label for="">Appointment Type:</label><br>
-          <input type="text" placeholder="Appointment type" id="input" /><br>
+        <label for="">Appointment Type:</label><br />
+        <input type="text" placeholder="Appointment type" id="input" /><br />
 
-          <label for="">Services:</label><br>
-          <input type="text" placeholder="Services" id="input" /><br>
+        <label for="">Services:</label><br />
+        <input type="text" placeholder="Services" id="input" /><br />
 
-          <label for="">Preffered Appointment Date</label><br>
-          <input type="date" placeholder="" id="input" /><br>
+        <label for="">Preffered Appointment Date</label><br />
+        <input type="date" placeholder="" id="input" /><br />
 
-          <label for="">Preffered Time</label><br>
-          <input type="time" placeholder="" id="input" /><br>
+        <label for="">Preffered Time</label><br />
+        <input type="time" placeholder="" id="input" /><br />
 
-          <label for="">Reason</label><br>
-          <textarea type="text" placeholder="Reason" id="input" class ="largeinput"></textarea>
+        <label for="">Reason</label><br />
+        <textarea
+          type="text"
+          placeholder="Reason"
+          id="input"
+          class="largeinput"
+        ></textarea>
       </form>
-
 
       <button class="submit">LogIn</button>
     </section>

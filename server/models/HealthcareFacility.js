@@ -6,19 +6,13 @@ const healthcareFacilitySchema = new mongoose.Schema({
     required: true,
   },
   contact: {
-    type: Number,
+    type: String,
     required: true,
   },
   type: {
     type: String,
     required: true,
   },
-  services: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
   operatingHours: {
     type: Object,
     required: true,
