@@ -17,11 +17,9 @@ const prescriptionSchema = new mongoose.Schema({
   },
   medicationName: {
     type: String,
-    required: true,
   },
   routeOfAdministration: {
     type: String,
-    required: true,
   },
   status: {
     type: String,
@@ -30,23 +28,18 @@ const prescriptionSchema = new mongoose.Schema({
   },
   dosage: {
     type: String,
-    required: true,
   },
   duration: {
     type: String,
-    required: true,
   },
   frequency: {
     type: String,
-    required: true,
   },
   refills: {
     type: Number,
-    required: true,
   },
   notes: {
     type: String,
-    required: true,
   },
 });
 

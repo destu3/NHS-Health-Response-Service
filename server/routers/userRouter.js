@@ -9,6 +9,7 @@ const authController = new AuthController();
 
 router.route('/login').post(authController.login());
 router.route('/sign-up').post(authController.register());
+router.get('/doctors', userController.getDoctors());
 
 router
   .route('/:id')
