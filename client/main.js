@@ -7,12 +7,13 @@ import {
   updateDetails,
 } from './js/profile.js';
 import { decideNavContent } from './js/nav.js';
+import { bookAppointment } from './js/bookAppointment.js';
+import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
-const reqPresBtn = document.querySelector('.reqPresBtn');
 
 // render navigation bar
 decideNavContent();
@@ -49,19 +50,4 @@ if (window.location.pathname.includes('/manageAccountDetail')) {
 // update user info
 if (submit) {
   submit.addEventListener('click', updateDetails);
-}
-
-
-// prescriptions functionality
-if (reqPresBtn) {
-  // doctor, prescription, dosage, duration, frequency, furtherInfo 
-  reqPresBtn.addEventListener('click', async () => {
-    const doctor = document.getElementById('doctor').value;
-    const prescription = document.getElementById('prescription').value;
-    const furtherInfo = document.getElementById('furtherInfo').value;
-
-    const res = await requestpresc(doctor, prescription, furtherInfo);
-    console.log(res)
-
-  })
 }

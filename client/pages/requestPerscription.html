@@ -16,7 +16,7 @@
   <body>
     <header class="nav-sect">
       <nav>
-        <img src="/imgs/nhs-logo.png" alt="logo" />
+        <a href="/pages/home.html"><img src="/imgs/nhs-logo.png" alt="logo" /></a>
         <p id="navLogo">Service Response App</p>
       </nav>
     </header>
@@ -24,6 +24,14 @@
     <section id="login">
       <h1>Request Prescription</h1>
         <form action="POST">
+          <label for="healthProfessional">Health Professional:</label><br />
+        <select id="healthProfessional" name="services">
+          <option value="" disabled selected>Select a Health Professional</option>
+          <option value="drAlha">Dr. Alhamadani</option>
+          <option value="drGilp">Dr. Gilpin</option>
+          <option value="drUdue">Dr. Uduebholo</option>
+          <option value="drYord">Dr. Yordanov</option>
+  </select><br/>
 
           <label for="">Doctor</label><br />
           <input
@@ -51,6 +59,7 @@
           ></textarea
           ><br />
 
+          <input type="button" value="Request" class="btnPrimary requestBtn"/>
           <input type="button" value="Request" class="btnPrimary reqPresBtn" />
           
         </form>

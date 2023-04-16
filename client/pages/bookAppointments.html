@@ -16,7 +16,8 @@
   <body>
     <header class="nav-sect">
       <nav>
-        <img src="/imgs/nhs-logo.png" alt="logo" />
+        <a href="/pages/home.html"><img src="/imgs/nhs-logo.png" alt="logo" /></a>
+        
         <p id="navLogo">Service Response App</p>
       </nav>
     </header>
@@ -25,28 +26,65 @@
       <h1>Book Appointment</h1>
 
       <form action="POST">
-        <label for="">Appointment Type:</label><br />
-        <input type="text" placeholder="Appointment type" id="input" /><br />
+        <!--
+          "patient": "64261cc5ad031ab41e587804",
+          "healthProfessional": "60c94aa71013731a3db3a7b3",
+          "service": "checkup",
+          "reason": "annual physical",
+          "facility": "64256e16fe89198ddc309463",
+          "status": "scheduled",
+          "date": "2023-04-15T00:00:00.000Z",
+          "time": "10:00 AM"
+        -->
+        <label for="healthProfessional">Health Professional:</label><br />
+        <select id="healthProfessional" name="services">
+          <option value="" disabled selected>Select a Health Professional</option>
+          <option value="drAlha">Dr. Alhamadani</option>
+          <option value="drGilp">Dr. Gilpin</option>
+          <option value="drUdue">Dr. Uduebholo</option>
+          <option value="drYord">Dr. Yordanov</option>
+  </select><br>
+        
 
-        <label for="">Services:</label><br />
-        <input type="text" placeholder="Services" id="input" /><br />
+        <label for="services">Services:</label><br />
+      <select id="services" name="services">
+        <option value="" disabled selected>Select your service</option>
+          <option value="checkup">Check up</option>
+    <option value="bloodtest">Bloodtest</option>
+    <option value="mental">Mental Health</option>
+    <option value="emergency">Emergency</option>
+  </select><br>
+
+  <label for="facility">Facility:</label><br />
+  <select id="facility" name="facility">
+    <option value="" disabled selected>Select your Facility</option>
+      <option value="glasgow">Glasgow</option>
+<option value="edinburgh">Edinburgh</option>
+<option value="hamilton">Hamilton</option>
+<option value="eastkilbride">East Kilbride</option>
+</select><br>
+
 
         <label for="">Preffered Appointment Date</label><br />
-        <input type="date" placeholder="" id="input" /><br />
+        <input type="date" placeholder="" id="date" /><br />
 
         <label for="">Preffered Time</label><br />
-        <input type="time" placeholder="" id="input" /><br />
+        <input type="time" placeholder="" id="time" /><br />
 
         <label for="">Reason</label><br />
         <textarea
           type="text"
           placeholder="Reason"
-          id="input"
+          id="reason"
           class="largeinput"
-        ></textarea>
+        ></textarea><br>
+
+        <input type="button" value="Book" class="btnPrimary bookAppBtn"/>
+      
       </form>
 
-      <button class="submit">LogIn</button>
+      
     </section>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>
