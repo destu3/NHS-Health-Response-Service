@@ -16,53 +16,41 @@
   <body>
     <header class="nav-sect">
       <nav>
-        <a href="/pages/home.html"><img src="/imgs/nhs-logo.png" alt="logo" /></a>
+        <img src="/imgs/nhs-logo.png" alt="logo" />
         <p id="navLogo">Service Response App</p>
       </nav>
     </header>
 
     <section id="login">
       <h1>Request Prescription</h1>
-        <form action="POST">
-          <label for="healthProfessional">Health Professional:</label><br />
+      <form action="POST">
+
+        <label for="healthProfessional">Health Professional:</label><br />
         <select id="healthProfessional" name="services">
           <option value="" disabled selected>Select a Health Professional</option>
-          <option value="drAlha">Dr. Alhamadani</option>
-          <option value="drGilp">Dr. Gilpin</option>
-          <option value="drUdue">Dr. Uduebholo</option>
-          <option value="drYord">Dr. Yordanov</option>
-  </select><br/>
 
-          <label for="">Doctor</label><br />
-          <input
-            type="text"
-            name="doctor"
-            id="doctor"
-            placeholder="Your Doctor's Name"
-          /><br />
+          </select><br />
 
-          <label for="">Medication Name</label><br />
-          <input
-            type="text"
-            name="prescription"
-            id="prescription"
-            placeholder="Enter Your Request"
-          /><br />
+        <label for="">Medication Name</label><br />
+        <input
+          type="text"
+          name="prescription"
+          id="prescription"
+          placeholder="Enter Your Request"
+        /><br />
 
-          <label for="">Reason</label><br />
-          <textarea
-            name="furtherInfo"
-            id="furtherInfo"
-            placeholder="Enter Your Reason"
-            cols="24"
-            rows="5"
-          ></textarea
-          ><br />
+        <label for="">Reason</label><br />
+        <textarea
+          name="furtherInfo"
+          id="furtherInfo"
+          placeholder="Enter Your Reason"
+          cols="24"
+          rows="5"
+        ></textarea
+        ><br />
 
-          <input type="button" value="Request" class="btnPrimary requestBtn"/>
-          <input type="button" value="Request" class="btnPrimary reqPresBtn" />
-          
-        </form>
+        <input type="button" value="Request" class="btnPrimary reqPresBtn" />
+      </form>
     </section>
     <script type="module" src="../main.js"></script>
   </body>

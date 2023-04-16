@@ -51,3 +51,17 @@ if (window.location.pathname.includes('/manageAccountDetail')) {
 if (submit) {
   submit.addEventListener('click', updateDetails);
 }
+
+// prescriptions functionality
+if (reqPresBtn) {
+  // doctor, prescription, dosage, duration, frequency, furtherInfo 
+  reqPresBtn.addEventListener('click', async () => {
+    const doctor = document.getElementById('healthProfessional').value;
+    const prescription = document.getElementById('prescription').value;
+    const furtherInfo = document.getElementById('furtherInfo').value;
+
+    const res = await requestpresc(doctor, prescription, furtherInfo);
+    console.log(res)
+
+  })
+}
