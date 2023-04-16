@@ -205,8 +205,8 @@ h2 {
 }
 
 input,
-textarea {
-  border: 2px solid #007bff;
+textarea, select {
+  border: 3px solid #007bff;
 
   border-radius: 5px;
   padding: 10px 40px;
@@ -214,6 +214,26 @@ textarea {
   font-size: 16px;
   outline: none;
   margin-bottom: 2rem;
+  width: 300px;
+  max-width: 100vw;
+}
+
+input[type="submit"]{
+  background-color: var(--btnPrimary);
+  color: var(--nhsWhite);
+  padding: 15px 30px;
+  outline: none;
+  font-size: 1rem;
+  display: block;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+option[value=""][disabled] {
+  display: none;
 }
 
 .details > input {
@@ -226,8 +246,8 @@ textarea {
 }
 
 .submit {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--btnPrimary);
+  color: var(--nhsWhite);
   padding: 15px 60px;
   outline: none;
   font-size: 1rem;
@@ -320,7 +340,7 @@ button:hover {
   }
 
   input,
-  textarea {
+  textarea, select {
     width: 300px;
   }
 }
