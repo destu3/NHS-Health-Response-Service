@@ -1,5 +1,6 @@
 import { login } from './js/login.js';
 import { signup } from './js/signup.js';
+import { requestpresc } from './js/prescription.js';
 import {
   getLoggedInUser,
   displayDetails,
@@ -13,9 +14,6 @@ import { requestPrescription } from './js/requestPrescription.js';
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
-const bookAppBtn = document.querySelector('.bookAppBtn');
-const requestBtn = document.querySelector('.requestBtn');
-
 
 // render navigation bar
 decideNavContent();
@@ -52,32 +50,4 @@ if (window.location.pathname.includes('/manageAccountDetail')) {
 // update user info
 if (submit) {
   submit.addEventListener('click', updateDetails);
-}
-
-//Book Appointment
-if (bookAppBtn) {
-  bookAppBtn.addEventListener('click', async () => {
-    const healthProfessional = document.getElementById('healthProfessional').value;
-    const services = document.getElementById('services').value;
-    const facility = document.getElementById('facility').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const reason = document.getElementById('reason').value;
-
-    const res = await bookAppointment(healthProfessional, services, facility, date, time, reason);
-    console.log(res);    
-  });
-}
-
-if (requestBtn) {
-  requestBtn.addEventListener('click', async () => {
-    const healthProfessional = document.getElementById('healthProfessional').value;
-    const prescription = document.getElementById('prescription').value;
-    const dosage = document.getElementById('dosage').value;
-    const frequency = document.getElementById('frequency').value;
-    const furtherInfo = document.getElementById('furtherInfo').value;
-
-    const res = await requestPrescription(healthProfessional, prescription, dosage, frequency, furtherInfo);
-    console.log(res);  
-  });
 }

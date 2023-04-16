@@ -6,7 +6,6 @@ import catchAsync from '../helpers/catchAsync.js';
 import AuthController from './AuthController.js';
 
 const authController = new AuthController();
-
 const handlerFactory = new HandlerFactory(_Patient);
 
 class UserController {
@@ -18,6 +17,15 @@ class UserController {
     this.Patient = Patient;
     this.HealthProfessional = HealthProfessional;
     this.ServiceManager = ServiceManager;
+  }
+
+  getDoctors() {
+    return catchAsync(async (req, res, next) => {
+      const doctors = await this.HealthProfessional.find();
+
+      // send response
+      res.status(200).json({ status: 'success', data: { doctors } });
+    });
   }
 
   getInfo() {

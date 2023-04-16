@@ -93,12 +93,13 @@ class AuthController {
     return catchAsync(async (req, res, next) => {
       // check if token cookie was sent with request
 
-      let token;
-      if (req.cookies.token) token = req.cookies.token;
-      if (!token)
+      if (!req.headers.authorization)
         throw new Error(
-          'token cookie was not sent with request, i.e. user is not logged in'
+          'auth token was not sent with request, i.e. user is not logged in'
         );
+
+      const arr = req.headers.authorization.split(' ');
+      const token = arr[1];
 
       // verify token is valid
       const decodedData = await promisify(jsonwebtoken.verify)(

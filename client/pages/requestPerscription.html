@@ -23,7 +23,6 @@
 
     <section id="login">
       <h1>Request Prescription</h1>
-      <div class="">
         <form action="POST">
           <label for="healthProfessional">Health Professional:</label><br />
         <select id="healthProfessional" name="services">
@@ -34,7 +33,15 @@
           <option value="drYord">Dr. Yordanov</option>
   </select><br/>
 
-          <label for="">Prescription</label><br />
+          <label for="">Doctor</label><br />
+          <input
+            type="text"
+            name="doctor"
+            id="doctor"
+            placeholder="Your Doctor's Name"
+          /><br />
+
+          <label for="">Medication Name</label><br />
           <input
             type="text"
             name="prescription"
@@ -42,34 +49,20 @@
             placeholder="Enter Your Request"
           /><br />
 
-          <label for="">Dosage</label><br />
-          <input
-            type="text"
-            name="dosage"
-            id="dosage"
-            placeholder="Enter how much you would like"
-          /><br />
-
-          <label for="">Frequency</label><br />
-          <input
-            type="text"
-            name="frequency"
-            id="frequency"
-            placeholder="How often do you take this medication?"
-          /><br />
-
-          <label for="">Further Information</label><br />
+          <label for="">Reason</label><br />
           <textarea
             name="furtherInfo"
             id="furtherInfo"
-            cols="30"
+            placeholder="Enter Your Reason"
+            cols="24"
             rows="5"
           ></textarea
           ><br />
 
           <input type="button" value="Request" class="btnPrimary requestBtn"/>
+          <input type="button" value="Request" class="btnPrimary reqPresBtn" />
+          
         </form>
-      </div>
     </section>
     <script type="module" src="../main.js"></script>
   </body>
