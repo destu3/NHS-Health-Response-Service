@@ -1,19 +1,19 @@
-import { login } from './js/login.js';
+import { login, logout } from './js/login.js';
 import { signup } from './js/signup.js';
-import { requestpresc } from './js/prescription.js';
-import {
-  getLoggedInUser,
-  displayDetails,
-  updateDetails,
-} from './js/profile.js';
+// import { requestpresc } from './js/prescription.js';
+import { displayDetails, updateDetails } from './js/profile.js';
+import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
-import { bookAppointment } from './js/bookAppointment.js';
-import { requestPrescription } from './js/requestPrescription.js';
+// import { bookAppointment } from './js/bookAppointment.js';
+// import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
+
+// decide hrefValue
+determineHref();
 
 // render navigation bar
 decideNavContent();
@@ -27,6 +27,10 @@ if (loginBtn) {
     const res = await login(email, password);
   });
 }
+
+// logout
+const logoutBtn = document.querySelector('.logout');
+if (logoutBtn) logoutBtn.addEventListener('click', logout);
 
 // Signup
 if (signUpBtn) {
@@ -52,16 +56,15 @@ if (submit) {
   submit.addEventListener('click', updateDetails);
 }
 
-// prescriptions functionality
-if (reqPresBtn) {
-  // doctor, prescription, dosage, duration, frequency, furtherInfo 
-  reqPresBtn.addEventListener('click', async () => {
-    const doctor = document.getElementById('healthProfessional').value;
-    const prescription = document.getElementById('prescription').value;
-    const furtherInfo = document.getElementById('furtherInfo').value;
+// // prescriptions functionality
+// if (reqPresBtn) {
+//   // doctor, prescription, dosage, duration, frequency, furtherInfo
+//   reqPresBtn.addEventListener('click', async () => {
+//     const doctor = document.getElementById('healthProfessional').value;
+//     const prescription = document.getElementById('prescription').value;
+//     const furtherInfo = document.getElementById('furtherInfo').value;
 
-    const res = await requestpresc(doctor, prescription, furtherInfo);
-    console.log(res)
-
-  })
-}
+//     const res = await requestpresc(doctor, prescription, furtherInfo);
+//     console.log(res);
+//   });
+// }
