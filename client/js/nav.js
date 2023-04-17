@@ -1,9 +1,14 @@
 export function decideNavContent() {
   const navSection = document.querySelector('.nav-sect');
   const html = `
-  <a href="/pages/manageAccountDetail.html"><div class="navlogin">
-    <img src="/icons/account.png" alt="logo"/>
-  </div></a>
+  <div class="navlogin">
+    <a href="/pages/manageAccountDetail.html">
+      <img src="/icons/user.png" alt="logo"/>
+    </a>
+    <button class="logout">
+      <img src="/icons/logout.png" alt="logout" />
+    </button>
+  </div>
   `;
 
   const altHtml = `

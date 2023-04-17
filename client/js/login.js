@@ -23,3 +23,9 @@ export const login = async (email, password, role = 'patient') => {
 
   return data;
 };
+
+export const logout = () => {
+  localStorage.setItem('token', '');
+  alert('successfully logged out');
+  window.location.href = '/pages/login.html';
+};
