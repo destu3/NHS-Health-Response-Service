@@ -5,7 +5,8 @@ import { populateDoctors } from './js/doctor.js';
 import { displayDetails, updateDetails } from './js/profile.js';
 import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
-// import { bookAppointment } from './js/bookAppointment.js';
+import { populateFacilities } from './js/facilities.js';
+import { bookAppointment } from './js/appointment.js';
 // import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
@@ -13,6 +14,7 @@ const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
 const reqPresBtn = document.querySelector('.reqPresBtn');
+const bookAppBtn = document.querySelector('.bookAppBtn');
 
 // decide hrefValue
 determineHref();
@@ -58,7 +60,7 @@ if (submit) {
   submit.addEventListener('click', updateDetails);
 }
 
-// prescriptions functionality
+// prescription functionality
 if (reqPresBtn) {
   populateDoctors();
   reqPresBtn.addEventListener('click', async () => {
@@ -68,5 +70,33 @@ if (reqPresBtn) {
 
     await requestPrescription(doctor, prescription, reason);
     alert('Prescription successfully registered');
+  });
+}
+
+// appointment functionality
+if (bookAppBtn) {
+  populateDoctors();
+  populateFacilities();
+
+  bookAppBtn.addEventListener('click', async () => {
+    const healthProfessional =
+      document.getElementById('healthProfessional').value;
+    const service = document.getElementById('services').value;
+    const reason = document.getElementById('reason').value;
+    const facility =
+      document.getElementById('facility').selectedOptions[0].dataset.id;
+    const date = new Date(document.getElementById('date').value);
+    const time = document.getElementById('time').value;
+
+    const res = await bookAppointment(
+      healthProfessional,
+      service,
+      reason,
+      facility,
+      date,
+      time
+    );
+
+    console.log(res);
   });
 }
