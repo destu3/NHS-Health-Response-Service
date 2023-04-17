@@ -1,6 +1,7 @@
 import { login, logout } from './js/login.js';
 import { signup } from './js/signup.js';
-// import { requestpresc } from './js/prescription.js';
+import { requestPrescription } from './js/prescription.js';
+import { populateDoctors } from './js/doctor.js';
 import { displayDetails, updateDetails } from './js/profile.js';
 import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
@@ -11,6 +12,7 @@ import { decideNavContent } from './js/nav.js';
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
+const reqPresBtn = document.querySelector('.reqPresBtn');
 
 // decide hrefValue
 determineHref();
@@ -56,15 +58,15 @@ if (submit) {
   submit.addEventListener('click', updateDetails);
 }
 
-// // prescriptions functionality
-// if (reqPresBtn) {
-//   // doctor, prescription, dosage, duration, frequency, furtherInfo
-//   reqPresBtn.addEventListener('click', async () => {
-//     const doctor = document.getElementById('healthProfessional').value;
-//     const prescription = document.getElementById('prescription').value;
-//     const furtherInfo = document.getElementById('furtherInfo').value;
+// prescriptions functionality
+if (reqPresBtn) {
+  populateDoctors();
+  reqPresBtn.addEventListener('click', async () => {
+    const doctor = document.getElementById('healthProfessional').value;
+    const prescription = document.getElementById('prescription').value;
+    const reason = document.getElementById('furtherInfo').value;
 
-//     const res = await requestpresc(doctor, prescription, furtherInfo);
-//     console.log(res);
-//   });
-// }
+    await requestPrescription(doctor, prescription, reason);
+    alert('Prescription successfully registered');
+  });
+}

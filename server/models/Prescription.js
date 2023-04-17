@@ -41,6 +41,10 @@ const prescriptionSchema = new mongoose.Schema({
   notes: {
     type: String,
   },
+  reason: {
+    type: String,
+    required: true,
+  },
 });
 
 prescriptionSchema.pre('save', async function (next) {
