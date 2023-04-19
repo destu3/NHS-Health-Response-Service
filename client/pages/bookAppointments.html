@@ -21,47 +21,44 @@
       >
     </header>
 
-    <section id="login">
+    <section class="content">
       <h1>Book Appointment</h1>
 
       <form action="POST">
-        <label for="healthProfessional">Health Professional:</label><br />
+        <label for="healthProfessional">Health Professional:</label>
         <select id="healthProfessional" name="services">
           <option value="" disabled selected>
             Select a Health Professional
-          </option></select
-        ><br />
+          </option>
+        </select>
 
-        <label for="services">Services:</label><br />
+        <label for="services">Services:</label>
         <select id="services" name="services">
           <option value="" disabled selected>Select your service</option>
-          <option value="checkup">Check up</option>
-          <option value="bloodtest">Bloodtest</option>
-          <option value="mental">Mental Health</option>
-          <option value="emergency">Emergency</option></select
-        ><br />
+          <option value="Checkup">Check up</option>
+          <option value="Bloodtest">Bloodtest</option>
+          <option value="Mental Health">Mental Health</option>
+          <option value="Emergency Service">Emergency</option>
+        </select>
 
-        <label for="facility">Facility:</label><br />
+        <label for="facility">Facility:</label>
         <select id="facility" name="facility">
-          <option value="" disabled selected>
-            Select your Facility
-          </option></select
-        ><br />
+          <option value="" disabled selected>Select your Facility</option>
+        </select>
 
-        <label for="">Preffered Appointment Date</label><br />
-        <input type="date" placeholder="" id="date" /><br />
+        <label for="">Preffered Appointment Date</label>
+        <input type="date" placeholder="" id="date" />
 
-        <label for="">Preffered Time</label><br />
-        <input type="time" placeholder="" id="time" /><br />
+        <label for="">Preffered Time</label>
+        <input type="time" placeholder="" id="time" />
 
-        <label for="">Reason</label><br />
+        <label for="">Reason</label>
         <textarea
           type="text"
           placeholder="Reason"
           id="reason"
           class="largeinput"
-        ></textarea
-        ><br />
+        ></textarea>
 
         <input type="button" value="Book" class="btnPrimary bookAppBtn" />
       </form>

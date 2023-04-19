@@ -6,7 +6,12 @@ import { displayDetails, updateDetails } from './js/profile.js';
 import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
 import { populateFacilities } from './js/facilities.js';
-import { bookAppointment } from './js/appointment.js';
+import {
+  initCalender,
+  bookAppointment,
+  toggleOverlay,
+  handleUpdate,
+} from './js/appointment.js';
 // import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
@@ -15,6 +20,9 @@ const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
 const reqPresBtn = document.querySelector('.reqPresBtn');
 const bookAppBtn = document.querySelector('.bookAppBtn');
+const calendarEl = document.getElementById('calendar');
+const overlay = document.querySelector('.overlay');
+const updateBtn = document.querySelector('.updateBtn');
 
 // decide hrefValue
 determineHref();
@@ -51,7 +59,7 @@ if (signUpBtn) {
 }
 
 // manage account profile
-if (window.location.pathname.includes('/manageAccountDetail')) {
+if (window.location.pathname.includes('/account')) {
   displayDetails();
 }
 
@@ -100,3 +108,29 @@ if (bookAppBtn) {
     console.log(res);
   });
 }
+
+// render calendar
+if (calendarEl) {
+  initCalender(calendarEl);
+}
+
+// toggle overlay
+if (overlay) {
+  overlay.addEventListener('click', function (e) {
+    if (e.target === this) {
+      toggleOverlay(undefined);
+    }
+  });
+}
+
+// update appointment functionality
+if (updateBtn)
+  updateBtn.addEventListener('click', () => {
+    const service = document.getElementById('service').value;
+    const date = new Date(document.getElementById('date')).value;
+    const time = document.getElementById('time').value;
+
+    const id = updateBtn.dataset.appointmentId;
+
+    handleUpdate(service, date, time, id);
+  });
