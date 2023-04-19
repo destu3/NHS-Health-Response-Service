@@ -6,10 +6,10 @@ const router = express.Router();
 const appointmentController = new AppointmentController();
 
 // route handlers
-router
-  .route('/')
-  .get(appointmentController.getAppointments())
-  .post(appointmentController.bookAppointment());
+router.route('/').post(appointmentController.getAppointments());
+
+router.post('/book-appointment', appointmentController.bookAppointment());
+
 router
   .route('/:id')
   .delete(appointmentController.cancelAppointment())

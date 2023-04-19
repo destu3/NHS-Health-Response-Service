@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NHS Service Response App</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="nav-sect">
+      <a href="/pages/home.html"
+        ><img src="/imgs/nhs-logo.png" alt="logo" />
+        <p id="navLogo">Service Response App</p></a
+      >
+    </header>
+
+    <section class="content">
+      <div id="calendar"></div>
+    </section>
+
+    <section class="overlay overlay-hidden">
+      <form>
+        <h1>Update Appointment</h1>
+        <label for="service">Service:</label>
+        <input type="text" id="service" name="service" />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" />
+
+        <input type="button" value="Update" class="btnPrimary updateBtn" />
+      </form>
+    </section>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

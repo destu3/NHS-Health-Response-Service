@@ -27,7 +27,7 @@ const appointmentSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    default: 'Confirmed',
+    default: 'scheduled',
   },
   date: {
     type: Date,

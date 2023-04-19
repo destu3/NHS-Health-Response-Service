@@ -1,16 +1,28 @@
 import { login, logout } from './js/login.js';
 import { signup } from './js/signup.js';
-// import { requestpresc } from './js/prescription.js';
+import { requestPrescription } from './js/prescription.js';
+import { populateDoctors } from './js/doctor.js';
 import { displayDetails, updateDetails } from './js/profile.js';
 import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
-// import { bookAppointment } from './js/bookAppointment.js';
+import { populateFacilities } from './js/facilities.js';
+import {
+  initCalender,
+  bookAppointment,
+  toggleOverlay,
+  handleUpdate,
+} from './js/appointment.js';
 // import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
 const signUpBtn = document.querySelector('.signUpBtn');
 const submit = document.querySelector('.submit');
+const reqPresBtn = document.querySelector('.reqPresBtn');
+const bookAppBtn = document.querySelector('.bookAppBtn');
+const calendarEl = document.getElementById('calendar');
+const overlay = document.querySelector('.overlay');
+const updateBtn = document.querySelector('.updateBtn');
 
 // decide hrefValue
 determineHref();
@@ -47,7 +59,7 @@ if (signUpBtn) {
 }
 
 // manage account profile
-if (window.location.pathname.includes('/manageAccountDetail')) {
+if (window.location.pathname.includes('/account')) {
   displayDetails();
 }
 
@@ -56,15 +68,69 @@ if (submit) {
   submit.addEventListener('click', updateDetails);
 }
 
-// // prescriptions functionality
-// if (reqPresBtn) {
-//   // doctor, prescription, dosage, duration, frequency, furtherInfo
-//   reqPresBtn.addEventListener('click', async () => {
-//     const doctor = document.getElementById('healthProfessional').value;
-//     const prescription = document.getElementById('prescription').value;
-//     const furtherInfo = document.getElementById('furtherInfo').value;
+// prescription functionality
+if (reqPresBtn) {
+  populateDoctors();
+  reqPresBtn.addEventListener('click', async () => {
+    const doctor = document.getElementById('healthProfessional').value;
+    const prescription = document.getElementById('prescription').value;
+    const reason = document.getElementById('furtherInfo').value;
 
-//     const res = await requestpresc(doctor, prescription, furtherInfo);
-//     console.log(res);
-//   });
-// }
+    await requestPrescription(doctor, prescription, reason);
+    alert('Prescription successfully registered');
+  });
+}
+
+// appointment functionality
+if (bookAppBtn) {
+  populateDoctors();
+  populateFacilities();
+
+  bookAppBtn.addEventListener('click', async () => {
+    const healthProfessional =
+      document.getElementById('healthProfessional').value;
+    const service = document.getElementById('services').value;
+    const reason = document.getElementById('reason').value;
+    const facility =
+      document.getElementById('facility').selectedOptions[0].dataset.id;
+    const date = new Date(document.getElementById('date').value);
+    const time = document.getElementById('time').value;
+
+    const res = await bookAppointment(
+      healthProfessional,
+      service,
+      reason,
+      facility,
+      date,
+      time
+    );
+
+    console.log(res);
+  });
+}
+
+// render calendar
+if (calendarEl) {
+  initCalender(calendarEl);
+}
+
+// toggle overlay
+if (overlay) {
+  overlay.addEventListener('click', function (e) {
+    if (e.target === this) {
+      toggleOverlay(undefined);
+    }
+  });
+}
+
+// update appointment functionality
+if (updateBtn)
+  updateBtn.addEventListener('click', () => {
+    const service = document.getElementById('service').value;
+    const date = new Date(document.getElementById('date')).value;
+    const time = document.getElementById('time').value;
+
+    const id = updateBtn.dataset.appointmentId;
+
+    handleUpdate(service, date, time, id);
+  });
