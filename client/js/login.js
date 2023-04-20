@@ -1,4 +1,4 @@
-export const login = async (email, password, role = 'patient') => {
+export const login = async (email, password, role) => {
   const url = 'http://127.0.0.1:3000/api/users/login';
 
   const res = await fetch(url, {

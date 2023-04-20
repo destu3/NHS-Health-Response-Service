@@ -18,6 +18,14 @@ const healthProfessionalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  role: {
+    type: String,
+    default: 'doctor',
+  },
+  dob: {
+    type: Date,
+    required: true,
+  },
   specialization: {
     type: String,
     required: true,

@@ -1,4 +1,4 @@
-async function getFacilities() {
+async function getFacilities(distance = 500) {
   // get user longitude and latitude
   let lat, lng;
 
@@ -20,7 +20,7 @@ async function getFacilities() {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
-    body: JSON.stringify({ lng, lat, distance: 500 }),
+    body: JSON.stringify({ lng, lat, distance }),
   });
 
   const data = await res.json();

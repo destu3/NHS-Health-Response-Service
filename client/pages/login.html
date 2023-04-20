@@ -25,17 +25,52 @@
       <h1>LOG IN</h1>
 
       <form action="POST">
-        <label for="email">Enter Email:</label><br />
-        <input type="email" placeholder="your@email.com" id="email" /><br />
+        <label for="email">Enter Email:</label>
+        <input type="email" placeholder="your@email.com" id="email" />
 
-        <label for="password">Enter Password:</label><br />
-        <input type="password" placeholder="Password" id="password" /><br />
+        <label for="password">Enter Password:</label>
+        <input type="password" placeholder="Password" id="password" />
 
-        <!--CODE FOR USER ROLE-->
+        <div class="checkbox-container">
+          <input
+            type="checkbox"
+            name="role"
+            value="patient"
+            onclick="uncheckOthers(this)"
+          />
+          <label for="patient">Patient</label>
+
+          <input
+            type="checkbox"
+            name="role"
+            value="doctor"
+            onclick="uncheckOthers(this)"
+          />
+          <label for="doctor">Doctor</label>
+
+          <input
+            type="checkbox"
+            name="role"
+            value="manager"
+            onclick="uncheckOthers(this)"
+          />
+          <label for="manager">Manager</label>
+        </div>
 
         <input type="button" value="Log In" class="btnPrimary loginBtn" />
       </form>
     </section>
+
+    <script>
+      function uncheckOthers(clickedCheckbox) {
+        const checkboxes = document.getElementsByName('role');
+        checkboxes.forEach(checkbox => {
+          if (checkbox !== clickedCheckbox) {
+            checkbox.checked = false;
+          }
+        });
+      }
+    </script>
 
     <script type="module" src="../main.js"></script>
   </body>

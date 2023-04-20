@@ -12,6 +12,14 @@ import {
   toggleOverlay,
   handleUpdate,
 } from './js/appointment.js';
+import {
+  addEventListeners,
+  renderCards,
+  handleCategoryUpdate,
+  showAddOverlay,
+  hideAddOverlay,
+  addCategory,
+} from './js/category.js';
 // import { requestPrescription } from './js/requestPrescription.js';
 
 // dom selection
@@ -22,7 +30,11 @@ const reqPresBtn = document.querySelector('.reqPresBtn');
 const bookAppBtn = document.querySelector('.bookAppBtn');
 const calendarEl = document.getElementById('calendar');
 const overlay = document.querySelector('.overlay');
+const addOverlay = document.querySelector('.add-overlay');
 const updateBtn = document.querySelector('.updateBtn');
+const addBtn = document.querySelector('.addBtn');
+const createBtn = document.querySelector('.createBtn');
+const checkboxes = document.getElementsByName('role');
 
 // decide hrefValue
 determineHref();
@@ -35,8 +47,13 @@ if (loginBtn) {
   loginBtn.addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    let role;
 
-    const res = await login(email, password);
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked) role = checkbox.value;
+    });
+
+    const res = await login(email, password, role);
   });
 }
 
@@ -124,7 +141,7 @@ if (overlay) {
 }
 
 // update appointment functionality
-if (updateBtn)
+if (location.pathname.includes('appointment')) {
   updateBtn.addEventListener('click', () => {
     const service = document.getElementById('service').value;
     const date = new Date(document.getElementById('date')).value;
@@ -134,3 +151,15 @@ if (updateBtn)
 
     handleUpdate(service, date, time, id);
   });
+}
+
+// category page
+
+if (location.pathname.includes('category')) {
+  renderCards();
+
+  addBtn.addEventListener('click', showAddOverlay);
+  updateBtn.addEventListener('click', handleCategoryUpdate);
+  addOverlay.addEventListener('click', hideAddOverlay);
+  createBtn.addEventListener('click', addCategory);
+}

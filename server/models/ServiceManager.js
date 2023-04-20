@@ -14,6 +14,14 @@ const serviceManagerSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  role: {
+    type: String,
+    default: 'manager',
+  },
+  dob: {
+    type: Date,
+    required: true,
+  },
   password: {
     type: String,
     required: true,
