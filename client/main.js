@@ -6,6 +6,7 @@ import { displayDetails, updateDetails } from './js/profile.js';
 import { determineHref } from './js/home.js';
 import { decideNavContent } from './js/nav.js';
 import { populateFacilities } from './js/facilities.js';
+import { displayHealthDetails, updateHealthDetails } from './js/healthProfile.js';
 import {
   initCalender,
   bookAppointment,
@@ -23,6 +24,7 @@ const bookAppBtn = document.querySelector('.bookAppBtn');
 const calendarEl = document.getElementById('calendar');
 const overlay = document.querySelector('.overlay');
 const updateBtn = document.querySelector('.updateBtn');
+const editHealthBtn = document.querySelector('.editHealthBtn')
 
 // decide hrefValue
 determineHref();
@@ -66,6 +68,17 @@ if (window.location.pathname.includes('/account')) {
 // update user info
 if (submit) {
   submit.addEventListener('click', updateDetails);
+}
+
+
+// manage Health Profile
+if (window.location.pathname.includes('/manageHealthProfile')) {
+  displayHealthDetails();
+}
+
+// update user info
+if (editHealthBtn) {
+  submit.addEventListener('click', updateHealthDetails);
 }
 
 // prescription functionality
