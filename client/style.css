@@ -175,7 +175,7 @@ h2 {
 /* Services page */
 
 #our-services {
-  margin: 20px 10px;
+  margin: 80px;
 }
 
 .services {
@@ -391,6 +391,10 @@ button:hover {
   }
   .managebtn {
     padding: 2px 5px;
+  }
+
+  #our-services {
+    margin: 20px;
   }
 }
 
