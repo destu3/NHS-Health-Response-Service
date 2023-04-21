@@ -51,7 +51,7 @@ export async function updateDetails() {
     lastName,
     email,
     dob: rawDob,
-    role: 'patient',
+    role: currentUser.role,
   });
 
   const res = await fetch(

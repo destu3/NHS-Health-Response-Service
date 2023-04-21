@@ -1,5 +1,6 @@
 export const determineHref = () => {
   if (
+    location.pathname == '/' ||
     location.pathname.includes('home') ||
     location.pathname.includes('login') ||
     location.pathname.includes('signup')
