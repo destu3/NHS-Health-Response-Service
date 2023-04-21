@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NHS Service Response App</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="nav-sect">
+      <a href="/pages/home.html"
+        ><img src="/imgs/nhs-logo.png" alt="logo" />
+        <p id="navLogo">Service Response App</p></a
+      >
+    </header>
+    <section class="content">
+      <h1>Services</h1>
+      <div class="category-cards-container"></div>
+    </section>
+
+    <section class="overlay overlay-hidden">
+      <form>
+        <h1>Update Service</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="status">Status</label>
+        <select name="status" id="status">
+          <option value="under development">under development</option>
+          <option value="approved">approved</option>
+          <option value="pending">pending</option>
+          <option value="rejected">rejected</option>
+        </select>
+
+        <label for="category">Category</label>
+        <select name="category" class="category" id="category"></select>
+
+        <input type="button" value="Update" class="btnPrimary updateBtn" />
+      </form>
+    </section>
+
+    <section class="overlay add-overlay overlay-hidden">
+      <form>
+        <h1>Add a service</h1>
+        <label for="name-add">Name</label>
+        <input type="text" id="name-add" name="name" />
+
+        <label for="category-add">Category</label>
+        <select name="category" class="category" id="category-add"></select>
+
+        <input type="button" value="Create" class="btnPrimary createBtn" />
+      </form>
+    </section>
+
+    <i class="fa-solid fa-circle-plus addBtn"></i>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

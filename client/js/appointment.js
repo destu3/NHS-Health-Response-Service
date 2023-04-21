@@ -53,6 +53,11 @@ export const bookAppointment = async (
 
 export const getAppointments = async () => {
   const url = 'http://127.0.0.1:3000/api/appointments';
+  const user = getLoggedInUser();
+
+  let role = 'patient';
+
+  if (user.role === 'doctor') role = 'healthProfessional';
 
   const res = await fetch(url, {
     method: 'POST',
@@ -61,7 +66,7 @@ export const getAppointments = async () => {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
     body: JSON.stringify({
-      patient: getLoggedInUser()._id,
+      [role]: user._id,
       status: { $ne: 'cancelled' },
     }),
   });

@@ -12,7 +12,19 @@ import {
   toggleOverlay,
   handleUpdate,
 } from './js/appointment.js';
-// import { requestPrescription } from './js/requestPrescription.js';
+import {
+  renderCards,
+  handleCategoryUpdate,
+  showAddOverlay,
+  hideAddOverlay,
+  addCategory,
+} from './js/category.js';
+import {
+  populateCategories,
+  renderServices,
+  handleServiceUpdate,
+  addService,
+} from './js/service.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
@@ -22,7 +34,11 @@ const reqPresBtn = document.querySelector('.reqPresBtn');
 const bookAppBtn = document.querySelector('.bookAppBtn');
 const calendarEl = document.getElementById('calendar');
 const overlay = document.querySelector('.overlay');
+const addOverlay = document.querySelector('.add-overlay');
 const updateBtn = document.querySelector('.updateBtn');
+const addBtn = document.querySelector('.addBtn');
+const createBtn = document.querySelector('.createBtn');
+const checkboxes = document.getElementsByName('role');
 
 // decide hrefValue
 determineHref();
@@ -35,8 +51,13 @@ if (loginBtn) {
   loginBtn.addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    let role;
 
-    const res = await login(email, password);
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked) role = checkbox.value;
+    });
+
+    await login(email, password, role);
   });
 }
 
@@ -124,7 +145,7 @@ if (overlay) {
 }
 
 // update appointment functionality
-if (updateBtn)
+if (location.pathname.includes('appointment')) {
   updateBtn.addEventListener('click', () => {
     const service = document.getElementById('service').value;
     const date = new Date(document.getElementById('date')).value;
@@ -134,3 +155,27 @@ if (updateBtn)
 
     handleUpdate(service, date, time, id);
   });
+}
+
+// category and service pages
+
+if (
+  location.pathname.includes('category') ||
+  location.pathname.includes('service')
+) {
+  addBtn.addEventListener('click', showAddOverlay);
+  addOverlay.addEventListener('click', hideAddOverlay);
+}
+
+if (location.pathname.includes('category')) {
+  renderCards();
+  updateBtn.addEventListener('click', handleCategoryUpdate);
+  createBtn.addEventListener('click', addCategory);
+}
+
+if (location.pathname.includes('service')) {
+  populateCategories();
+  renderServices();
+  updateBtn.addEventListener('click', handleServiceUpdate);
+  createBtn.addEventListener('click', addService);
+}

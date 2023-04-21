@@ -13,7 +13,7 @@ const healthcareServiceSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['pending', 'approved', 'rejected', 'Under development'],
+    enum: ['pending', 'approved', 'rejected', 'under development'],
     default: 'pending',
   },
   category: {

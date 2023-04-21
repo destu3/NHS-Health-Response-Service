@@ -24,30 +24,29 @@
     <section class="content">
       <h1>Request Prescription</h1>
       <form action="POST">
-        <label for="healthProfessional">Health Professional:</label><br />
+        <label for="healthProfessional">Health Professional:</label>
         <select id="healthProfessional" name="services">
           <option value="" disabled selected>
             Select a Health Professional
-          </option></select
-        ><br />
+          </option>
+        </select>
 
-        <label for="">Medication Name</label><br />
+        <label for="">Medication Name</label>
         <input
           type="text"
           name="prescription"
           id="prescription"
           placeholder="Enter Your Request"
-        /><br />
+        />
 
-        <label for="">Reason</label><br />
+        <label for="">Reason</label>
         <textarea
           name="furtherInfo"
           id="furtherInfo"
           placeholder="Enter Your Reason"
           cols="24"
           rows="5"
-        ></textarea
-        ><br />
+        ></textarea>
 
         <input type="button" value="Request" class="btnPrimary reqPresBtn" />
       </form>

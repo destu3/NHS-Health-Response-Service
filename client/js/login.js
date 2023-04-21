@@ -1,4 +1,4 @@
-export const login = async (email, password, role = 'patient') => {
+export const login = async (email, password, role) => {
   const url = 'http://127.0.0.1:3000/api/users/login';
 
   const res = await fetch(url, {
@@ -15,8 +15,8 @@ export const login = async (email, password, role = 'patient') => {
 
   if (res.ok) {
     alert('successfully logged in');
-    window.location.href = '/pages/home.html';
     localStorage.setItem('token', token);
+    window.location.href = '/pages/home.html';
   } else {
     console.log(data);
   }

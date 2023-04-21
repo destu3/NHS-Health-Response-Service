@@ -175,7 +175,7 @@ h2 {
 /* Services page */
 
 #our-services {
-  margin: 2% 5%;
+  margin: 20px 10px;
 }
 
 .services {
@@ -186,8 +186,8 @@ h2 {
 }
 
 .card {
-  width: 350px;
-  aspect-ratio: 1 / 1;
+  max-width: 340px;
+  min-height: 310px;
   padding: 20px 35px;
   border-radius: 10px;
   background-color: #ebebeb;
@@ -195,7 +195,7 @@ h2 {
   overflow: hidden;
   position: relative;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-out;
 }
 
 .card:hover {
@@ -239,15 +239,17 @@ input,
 textarea,
 select {
   border: 3px solid #007bff;
-
   border-radius: 5px;
-  padding: 10px 40px;
+  padding: 10px 5px 10px 10px;
   padding-left: 5px;
   font-size: 16px;
   outline: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   width: 300px;
-  max-width: 100vw;
+}
+
+input[type='checkbox'] {
+  width: fit-content;
 }
 
 input[type='submit'] {
@@ -303,7 +305,6 @@ label {
   outline: none;
   font-size: 1rem;
   display: block;
-  margin-top: 50px;
   border: none;
   cursor: pointer;
 }
@@ -449,4 +450,72 @@ button:hover {
 form {
   display: flex;
   flex-direction: column;
+}
+
+/* Style for category cards */
+.category-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: relative;
+}
+
+.category-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.category-card p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 0;
+}
+
+.card-icons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  color: #666666;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #333333;
+}
+
+.checkbox-container label {
+  margin-right: 10px;
+}
+
+.addBtn {
+  position: absolute;
+  color: var(--nhsBlue);
+  font-size: 4rem;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.addBtn:hover {
+  transform: scale(1.1);
 }

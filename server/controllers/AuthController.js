@@ -60,8 +60,13 @@ class AuthController {
       }
 
       // check if user exists based on email and check if password is correct
-      if (!user || !(await this.verifyPassword(password, user.password)))
-        throw new Error('No user found, Email or password is incorrect');
+      if (role == 'patient') {
+        if (!user || !(await this.verifyPassword(password, user.password)))
+          throw new Error('No user found, Email or password is incorrect');
+      } else {
+        if (!user || !(password === user.password))
+          throw new Error('No user found, Email or password is incorrect');
+      }
 
       user.password = undefined;
 
