@@ -13,14 +13,18 @@ import {
   handleUpdate,
 } from './js/appointment.js';
 import {
-  addEventListeners,
   renderCards,
   handleCategoryUpdate,
   showAddOverlay,
   hideAddOverlay,
   addCategory,
 } from './js/category.js';
-// import { requestPrescription } from './js/requestPrescription.js';
+import {
+  populateCategories,
+  renderServices,
+  handleServiceUpdate,
+  addService,
+} from './js/service.js';
 
 // dom selection
 const loginBtn = document.querySelector('.loginBtn');
@@ -53,7 +57,7 @@ if (loginBtn) {
       if (checkbox.checked) role = checkbox.value;
     });
 
-    const res = await login(email, password, role);
+    await login(email, password, role);
   });
 }
 
@@ -153,13 +157,25 @@ if (location.pathname.includes('appointment')) {
   });
 }
 
-// category page
+// category and service pages
+
+if (
+  location.pathname.includes('category') ||
+  location.pathname.includes('service')
+) {
+  addBtn.addEventListener('click', showAddOverlay);
+  addOverlay.addEventListener('click', hideAddOverlay);
+}
 
 if (location.pathname.includes('category')) {
   renderCards();
-
-  addBtn.addEventListener('click', showAddOverlay);
   updateBtn.addEventListener('click', handleCategoryUpdate);
-  addOverlay.addEventListener('click', hideAddOverlay);
   createBtn.addEventListener('click', addCategory);
+}
+
+if (location.pathname.includes('service')) {
+  populateCategories();
+  renderServices();
+  updateBtn.addEventListener('click', handleServiceUpdate);
+  createBtn.addEventListener('click', addService);
 }

@@ -15,8 +15,8 @@ export const login = async (email, password, role) => {
 
   if (res.ok) {
     alert('successfully logged in');
-    window.location.href = '/pages/home.html';
     localStorage.setItem('token', token);
+    window.location.href = '/pages/home.html';
   } else {
     console.log(data);
   }

@@ -12,7 +12,8 @@ export const signup = async (firstName, lastName, email, password, dob) => {
   const data = await res.json();
 
   if (res.ok) {
-    alert('You have successfully signed up');
+    alert('You have successfully signed up, please log in with your details');
+    window.location.href = '/pages/login.html';
   }
 
   return data;

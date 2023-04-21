@@ -45,7 +45,7 @@ export const addEventListeners = () => {
   });
 };
 
-async function getCategories() {
+export async function getCategories() {
   const url = 'http://127.0.0.1:3000/api/categories';
 
   const res = await fetch(url, {
@@ -64,7 +64,7 @@ function showInfo(name, status) {
   statusField.value = status;
 }
 
-function toggleOverlay() {
+export function toggleOverlay() {
   // if edit icon is clicked
   const card = this.parentElement.parentElement;
   const name = card.querySelector('h2').textContent;
