@@ -24,7 +24,6 @@ const healthProfessionalSchema = new mongoose.Schema({
   },
   dob: {
     type: Date,
-    required: true,
   },
   specialization: {
     type: String,

@@ -9,7 +9,6 @@ const appointmentSchema = new mongoose.Schema({
   healthProfessional: {
     type: mongoose.Schema.ObjectId,
     ref: 'HealthProfessional',
-    required: true,
   },
   service: {
     type: String,
